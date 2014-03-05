@@ -24,3 +24,8 @@ class TestSetup(unittest.TestCase):
         """Validate that our product is installed."""
         qi = self.portal.portal_quickinstaller
         self.assertTrue(qi.isProductInstalled('ps.plone.basepolicy'))
+
+    def test_products_ploneformgen_installed(self):
+        """Test that Products.PloneFormGen is installed."""
+        qi = self.portal.portal_quickinstaller
+        self.assertTrue(qi.isProductInstalled('PloneFormGen'))
