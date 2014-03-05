@@ -34,3 +34,12 @@ class TestSetup(unittest.TestCase):
         """Test that collective.contentleadimage is installed."""
         qi = self.portal.portal_quickinstaller
         self.assertTrue(qi.isProductInstalled('collective.contentleadimage'))
+
+    def test_plone_app_theming_installed(self):
+        """Test that plone.app.theming is installed."""
+        qi = self.portal.portal_quickinstaller
+        if qi.isProductAvailable('plone.app.theming'):
+            self.assertTrue(qi.isProductInstalled('plone.app.theming'))
+        else:
+            self.assertTrue(
+                'plone.app.theming' in qi.listInstallableProfiles())
