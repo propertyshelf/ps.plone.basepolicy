@@ -24,54 +24,54 @@ class TestSettings(unittest.TestCase):
         self.portal_workflow = getToolByName(self.portal, 'portal_workflow')
 
     def test_mailhost_host(self):
-        """Test that the correct SMTP Server is set."""
+        """Validate the SMTP server settings."""
         mailhost = getToolByName(self.portal, "MailHost")
         self.assertEquals("localhost", mailhost.smtp_host)
 
     def test_email_from_address(self):
-        """Test that the correct Site 'From' address is set."""
+        """Validate the site from address."""
         self.assertEquals(
             "info@propertyshelf.com",
             self.portal.getProperty("email_from_address")
         )
 
     def test_email_from_name(self):
-        """Test that the correct Site 'From' name is set."""
+        """Validate the site from name."""
         self.assertEquals(
             "Site Administrator", self.portal.getProperty("email_from_name"))
 
     def test_about_view_anonymous_allowed(self):
-        """Test that the Allow view about option is disabled."""
+        """Validate that only members see about information."""
         sp = self.p_properties.get('site_properties')
         self.failUnless(sp)
         self.assertFalse(getattr(sp, "allowAnonymousViewAbout"))
 
     def test_dc_metadata_exposed(self):
-        """Test that the Expose Dublin Core metadata option is enabled."""
+        """Validate that the Dublin Core metadata is exposed."""
         sp = self.p_properties.get('site_properties')
         self.failUnless(sp)
         self.assertTrue(getattr(sp, "exposeDCMetaTags"))
 
     def test_no_email_as_login(self):
-        """Test that User email as login is disabled."""
+        """Validate that email is not used as login."""
         sp = self.p_properties.get('site_properties')
         self.failUnless(sp)
         self.assertFalse(getattr(sp, "use_email_as_login"))
 
     def test_external_sites_new_window(self):
-        """Test that Open external sites in new window is enabled."""
+        """Validate that external sites open in a new window."""
         sp = self.p_properties.get('site_properties')
         self.failUnless(sp)
         self.assertTrue(getattr(sp, "external_links_open_new_window"))
 
     def test_nonfolderish_sections_disabled(self):
-        """Test that Generate tabs for items other than folders is disabled."""
+        """Validate that tabs are not generated for non-folderish items."""
         sp = self.p_properties.get('site_properties')
         self.failUnless(sp)
         self.assertTrue(getattr(sp, "disable_nonfolderish_sections"))
 
     def test_sitemap_enabled(self):
-        """Test that the Expose sitemap.xml.gz option is enabled."""
+        """Validate that the the sitemap.xml.gz is exposed."""
         sp = self.p_properties.get('site_properties')
         self.failUnless(sp)
         self.assertTrue(getattr(sp, "enable_sitemap"))
@@ -83,7 +83,7 @@ class TestSettings(unittest.TestCase):
         self.assertTrue(getattr(sp, "show_upload_action"))
 
     def test_tinymce_settings(self):
-        """Test that the custom TinyMCE editor settings are applied."""
+        """Validate the custom TinyMCE editor settings."""
         utility = getToolByName(self.portal, 'portal_tinymce')
         self.assertTrue(utility.link_using_uids)
         self.assertTrue(utility.toolbar_visualchars)
