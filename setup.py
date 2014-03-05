@@ -13,6 +13,7 @@ long_description = ('\n'.join([
 install_requires = [
     'setuptools',
     'Products.PloneFormGen',
+    'collective.contentleadimage',
 ]
 
 setup(

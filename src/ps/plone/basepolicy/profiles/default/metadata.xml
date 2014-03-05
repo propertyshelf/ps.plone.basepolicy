@@ -3,5 +3,6 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-Products.PloneFormGen:default</dependency>
+    <dependency>profile-collective.contentleadimage:default</dependency>
   </dependencies>
 </metadata>

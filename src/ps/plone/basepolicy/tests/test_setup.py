@@ -29,3 +29,8 @@ class TestSetup(unittest.TestCase):
         """Test that Products.PloneFormGen is installed."""
         qi = self.portal.portal_quickinstaller
         self.assertTrue(qi.isProductInstalled('PloneFormGen'))
+
+    def test_collective_contentleadimage_installed(self):
+        """Test that collective.contentleadimage is installed."""
+        qi = self.portal.portal_quickinstaller
+        self.assertTrue(qi.isProductInstalled('collective.contentleadimage'))
