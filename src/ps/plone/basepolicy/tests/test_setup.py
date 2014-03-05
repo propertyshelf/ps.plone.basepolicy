@@ -35,6 +35,11 @@ class TestSetup(unittest.TestCase):
         qi = self.portal.portal_quickinstaller
         self.assertTrue(qi.isProductInstalled('collective.contentleadimage'))
 
+    def test_collective_quickupload_installed(self):
+        """Test that collective.quickupload is installed."""
+        qi = self.portal.portal_quickinstaller
+        self.assertTrue(qi.isProductInstalled('collective.quickupload'))
+
     def test_plone_app_theming_installed(self):
         """Test that plone.app.theming is installed."""
         qi = self.portal.portal_quickinstaller

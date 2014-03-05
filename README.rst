@@ -11,6 +11,7 @@ The following Add-Ons will be installed automatically:
 
 - `Products.PloneFormGen`_
 - `collective.contentleadimage`_
+- `collective.quickupload`_
 - `plone.app.theming`_
 
 
@@ -37,4 +38,5 @@ Mostly Harmless
 .. _`Products.PloneFormGen`: https://pypi.python.org/pypi/Products.PloneFormGen
 .. _`Propertyshelf`: http://propertyshelf.com
 .. _`collective.contentleadimage`: https://pypi.python.org/pypi/collective.contentleadimage
+.. _ `collective.quickupload`: https://pypi.python.org/pypi/collective.quickupload
 .. _`plone.app.theming`: https://pypi.python.org/pypi/plone.app.theming

@@ -14,6 +14,7 @@ install_requires = [
     'setuptools',
     'Products.PloneFormGen',
     'collective.contentleadimage',
+    'collective.quickupload',
     'plone.app.theming',
 ]
 
