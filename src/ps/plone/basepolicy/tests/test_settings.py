@@ -76,6 +76,12 @@ class TestSettings(unittest.TestCase):
         self.failUnless(sp)
         self.assertTrue(getattr(sp, "enable_sitemap"))
 
+    def test_sendto_disabled(self):
+        """Validate that nobody can use the sendto_form."""
+        roles = self.portal.rolesOfPermission('Allow sendto')
+        roles = [r['name'] for r in roles if r['selected']]
+        self.assertEquals(roles, [])
+
     def test_quickupload_settings(self):
         """Validate the collective.quickupload settings."""
         sp = self.p_properties.get('quickupload_properties')
