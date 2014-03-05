@@ -1,8 +1,11 @@
 Changelog
 =========
 
-0.2 (unreleased)
+0.2 (2014-03-05)
 ----------------
+
+- Install collective.quickupload.
+- Remove 'Allow sendto' permission to disable sendto_form spams.
 
 
 0.1 (2014-03-05)
