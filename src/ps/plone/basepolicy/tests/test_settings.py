@@ -76,6 +76,12 @@ class TestSettings(unittest.TestCase):
         self.failUnless(sp)
         self.assertTrue(getattr(sp, "enable_sitemap"))
 
+    def test_quickupload_settings(self):
+        """Validate the collective.quickupload settings."""
+        sp = self.p_properties.get('quickupload_properties')
+        self.failUnless(sp)
+        self.assertTrue(getattr(sp, "show_upload_action"))
+
     def test_tinymce_settings(self):
         """Test that the custom TinyMCE editor settings are applied."""
         utility = getToolByName(self.portal, 'portal_tinymce')
