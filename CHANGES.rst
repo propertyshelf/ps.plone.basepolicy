@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.3 (2016-01-20)
 ----------------
 
 - Don't set email_from_address by default.
