@@ -30,15 +30,12 @@ class TestSettings(unittest.TestCase):
 
     def test_email_from_address(self):
         """Validate the site from address."""
-        self.assertEqual(
-            'info@propertyshelf.com',
-            self.portal.getProperty('email_from_address'),
-        )
+        self.assertEqual('', self.portal.getProperty('email_from_address'))
 
     def test_email_from_name(self):
         """Validate the site from name."""
         self.assertEqual(
-            'Site Administrator',
+            'Website Administrator',
             self.portal.getProperty('email_from_name'),
         )
 
