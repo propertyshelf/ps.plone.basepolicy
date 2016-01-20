@@ -50,6 +50,7 @@ setup(
     extras_require={
         'test': [
             'plone.app.testing',
+            'unittest2',
         ],
     },
     install_requires=install_requires,
