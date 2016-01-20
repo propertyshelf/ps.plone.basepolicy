@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Basic Site Policy for Propertyshelf Plone Websites."""
 
 
